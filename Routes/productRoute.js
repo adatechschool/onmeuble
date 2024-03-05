@@ -22,7 +22,7 @@ productRoute.get("/product", (req, resp) => {
 
 
 productRoute.get("/product/:id", (req, resp) => {
-    const productId = req.params.id;
+    const productId = Number(req.params.id);
 
     fs.readFile("./mocks/items.json", "utf-8", (err, data) => {
         if(err) {
