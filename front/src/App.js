@@ -9,12 +9,8 @@ function App() {
 
       <div className="container">
         <h1>On meuble</h1>
-        <div className="article-container">
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-        </div>
+
+        <Article />
       </div>
     </div>
   );
