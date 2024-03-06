@@ -55,8 +55,8 @@ const listFurniture = arrayOfFurnitures.map((furniture) => (
   </article>
 ));
 
-function Article() {
+function ListArticle() {
   return <div className="article-container">{listFurniture}</div>;
 }
 
-export default Article;
+export default ListArticle;
