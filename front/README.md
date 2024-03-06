@@ -39,21 +39,21 @@ npm run build
 
 Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise les technologies suivantes:
 
-<div align="center;">
-    <div padding="10px;">
-        <h2 align="center;">NodeJS</h2>
-        <img width="150px;" src='./src/img/nodejs.png'>
-    </div>
-    <div padding="10px;">
-        <h2 align="center;">React</h2>
-        <img width="150px;" src='./src/img/react.png'>
-    </div>
-    <div padding="10px;">
-        <h2 align="center;">Supabase</h2>
-        <img width="150px;" src='./src/img/supabase.png'>
-    </div>
-    <div padding="10px;">
-        <h2 align="center;">Postman</h2>
-        <img width="150px;" src='./src/img/postman.png'>
-    </div>
-</div>
+<p align="center">
+    <a target="_blank" rel="noreferrer" padding="10px;">
+        <h2 align="center">NodeJS</h2>
+        <img width="150px" src='./src/img/nodejs.png'>
+    </a>
+    <a target="_blank" rel="noreferrer" padding="10px;">
+        <h2 align="center">React</h2>
+        <img width="150px" src='./src/img/react.png'>
+    </a>
+    <a target="_blank" rel="noreferrer" padding="10px;">
+        <h2 align="center">Supabase</h2>
+        <img width="150px" src='./src/img/supabase.png'>
+    </a>
+    <a target="_blank" rel="noreferrer" padding="10px;">
+        <h2 align="center">Postman</h2>
+        <img width="150px" src='./src/img/postman.png'>
+    </a>
+</p>
