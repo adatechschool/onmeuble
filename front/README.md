@@ -39,21 +39,21 @@ npm run build
 
 Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise les technologies suivantes:
 
-<div style="display: flex">
-    <div style="padding: 10px; display: flex;">
-        <h2>NodeJS</h2>
+<div style="align: center;">
+    <div style="padding: 10px;">
+        <h2 style="align: center;">NodeJS</h2>
         <img style="width: 150px;" src='./src/img/nodejs.png'>
     </div>
-    <div style="padding: 10px; display: flex;">
-        <h2 style="text-align: center;">React</h2>
+    <div style="padding: 10px;">
+        <h2 style="align: center;">React</h2>
         <img style="width: 150px;" src='./src/img/react.png'>
     </div>
-    <div style="padding: 10px; display: flex;">
-        <h2 style="text-align: center;">Supabase</h2>
+    <div style="padding: 10px;">
+        <h2 style="align: center;">Supabase</h2>
         <img style="width: 150px;" src='./src/img/supabase.png'>
     </div>
-    <div style="padding: 10px; display: flex;">
-        <h2 style="text-align: center;">Postman</h2>
+    <div style="padding: 10px;">
+        <h2 style="align: center;">Postman</h2>
         <img style="width: 150px;" src='./src/img/postman.png'>
     </div>
 </div>
