@@ -41,19 +41,15 @@ Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise 
 
 <p align="center">
     <a target="_blank" rel="noreferrer" padding="10px;">
-        <h2 align="center">NodeJS</h2>
-        <img width="150px" src='./src/img/nodejs.png'>
+        <img width="150px" src='./src/img/nodejs.png'  alt="NODE JS">
     </a>
     <a target="_blank" rel="noreferrer" padding="10px;">
-        <h2 align="center">React</h2>
-        <img width="150px" src='./src/img/react.png'>
+        <img width="150px" src='./src/img/react.png'  alt="REACT">
     </a>
     <a target="_blank" rel="noreferrer" padding="10px;">
-        <h2 align="center">Supabase</h2>
-        <img width="150px" src='./src/img/supabase.png'>
+        <img width="150px" src='./src/img/supabase.png' alt="SUPABASE">
     </a>
     <a target="_blank" rel="noreferrer" padding="10px;">
-        <h2 align="center">Postman</h2>
-        <img width="150px" src='./src/img/postman.png'>
+        <img width="150px" src='./src/img/postman.png' alt="POSTMAN">
     </a>
 </p>
