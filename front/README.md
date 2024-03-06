@@ -8,6 +8,7 @@
 - [On Meuble](#on-meuble)
   - [Installation](#installation)
   - [Technologies](#technologies)
+  - [Auteurs](#auteurs)
 
 </details>
 
@@ -53,3 +54,14 @@ Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise 
         <img width="150px" src='./src/img/postman.png' alt="POSTMAN">
     </a>
 </p>
+
+## Auteurs
+
+- **Alexandre BOBIS** - *Front/Back*
+- **Amélie MASSON** - *Front/Back*
+- **Aurélien CARTIER** - *Back/Front*
+- **Chloé PELERIN** - *Front/Back*
+- **Léa STATTNER** - *Front/Back*
+- **Eliana YEPEZ** - *Back/Front*
+- **Imelda KASENTE** - *Back/Front*
+- **Ryo RAFAEL** - *Back/Front*
