@@ -40,16 +40,16 @@ npm run build
 Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise les technologies suivantes:
 
 <p align="center">
-    <a target="_blank" rel="noreferrer" padding="10px;">
+    <a target="_blank" rel="noreferrer" padding="20px;">
         <img width="150px" src='./src/img/nodejs.png'  alt="NODE JS">
     </a>
-    <a target="_blank" rel="noreferrer" padding="10px;">
+    <a target="_blank" rel="noreferrer" padding="20px;">
         <img width="150px" src='./src/img/react.png'  alt="REACT">
     </a>
-    <a target="_blank" rel="noreferrer" padding="10px;">
+    <a target="_blank" rel="noreferrer" padding="20px;">
         <img width="150px" src='./src/img/supabase.png' alt="SUPABASE">
     </a>
-    <a target="_blank" rel="noreferrer" padding="10px;">
+    <a target="_blank" rel="noreferrer" padding="20px;">
         <img width="150px" src='./src/img/postman.png' alt="POSTMAN">
     </a>
 </p>
