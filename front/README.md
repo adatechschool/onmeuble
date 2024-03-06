@@ -39,7 +39,7 @@ npm run build
 
 Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise les technologies suivantes:
 
-<div style="align: center;">
+<p style="align: center;">
     <div style="padding: 10px;">
         <h2 style="align: center;">NodeJS</h2>
         <img style="width: 150px;" src='./src/img/nodejs.png'>
@@ -56,4 +56,4 @@ Ce projet est un site de vente de meubles (*par Lauréline Fleury*). Il utilise 
         <h2 style="align: center;">Postman</h2>
         <img style="width: 150px;" src='./src/img/postman.png'>
     </div>
-</div>
+</p>
