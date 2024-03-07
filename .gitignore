@@ -1,4 +1,9 @@
+# Répertoire de stockage des différentes dépendances
 node_modules/
+# Répertoire de l'historique des différentes routes réalisées
 .history/
 
+# Fichier inutile propre au Mac
 .DS_Store
+# Fichier où sont stocké l'URL et la clé de la base de données "Supabase"
+.env
