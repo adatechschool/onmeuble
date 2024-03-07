@@ -1,5 +1,10 @@
+//! Imports (IMPORTANT)
+
 import ListArticle from "../components/ListArticle";
 import '../App.css'
+
+//? Component
+
 
 function Home() {
     return (
@@ -9,5 +14,7 @@ function Home() {
         </div>
     );
 }
+
+//! Export (IMPORTANT)
 
 export default Home;

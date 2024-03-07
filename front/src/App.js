@@ -3,19 +3,24 @@
 import "./App.css";
 import logo from "./img/furniture.png";
 import "https://kit.fontawesome.com/6a21cd18bd.js";
-import Home from "./pages/Home";
+import Products from "./pages/Products";
 import Basket from "./pages/Basket";
 import Profile from "./pages/Profile";
-
+import Details from "./pages/Details";
 import { Routes, Route, Link } from "react-router-dom";
+import ListArticle from "./components/ListArticle";
+
+//? Component
 
 function App() {
   return (
       <div>
+        {/* Barre de navigation */}
         <nav>
           <div className="leftNav">
-            <Link to="/">
-              <img id="logo" src={logo} alt="" />
+            {/* <Link> permet de se référer plus tard au 'path' correspondante (dans ce cas, './products/') */}
+            <Link to="/products/">
+              <img id="logo" src={logo} alt="On meuble" />
             </Link>
           </div>
           <div className="rightNav">
@@ -32,8 +37,12 @@ function App() {
             </Link>
           </div>
         </nav>
+        {/* <Routes> permet de créer des routes, cette balise comprend que des routes vont être créées */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route> fait apparaître l'élément Products à l'URL ./products/ */}
+          <Route path="/products/" element={<Products />} />
+          {/* <Route> fait apparaître l'élément Details à l'URL ./products/:id */}
+          <Route path="/products/:id" element={<Details />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>

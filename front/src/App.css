@@ -1,11 +1,17 @@
 /* NAVBAR */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+ * {
+
+  font-family: Chivo;
+ }
 
 nav {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
-h1, h2, p{
+h1, h2, .type-p, .price-p {
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
@@ -54,6 +60,7 @@ article {
   width: 20%;
   padding: 10px;
   margin: 10px;
+  transition: all 0.3s ease;
 }
 
 article:hover {
@@ -62,12 +69,23 @@ article:hover {
 }
 
 .img-furniture {
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+.frame  {
+  display: inline-block;
+  height: 300px;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: end;
 }
 
 .buy {

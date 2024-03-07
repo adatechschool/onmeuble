@@ -1,4 +1,9 @@
+//! Imports (IMPORTANT)
+
 import '../App.css';
+
+//? Component
+//todo: Créer la page profil administrateur
 
 function Profile() {
     return (
@@ -7,5 +12,7 @@ function Profile() {
         </div>
     );
 }
+
+//! Export (IMPORTANT)
 
 export default Profile;

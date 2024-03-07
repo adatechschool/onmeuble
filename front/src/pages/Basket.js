@@ -3,6 +3,7 @@
 
 
 //? Component
+//todo: Créer la page panier
 
 function Basket() {
     return (
