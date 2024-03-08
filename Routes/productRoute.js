@@ -1,67 +1,65 @@
 const express = require("express");
 const productRoute = express.Router();
-const fs = require("fs");
 
 
-const server = require('../server');
+const server = require("../server");
 const supabase = server.supabase;
 
-
+//Route pour récupérer les infos de la page d'ensenble des produits (id/nom/type/prix)
 productRoute.get("/product", async (req, resp) => {
-    try {
-        const {data, error} = await supabase.from("Products").select("*");
-        if(error) {
-            throw error;
-        }
-        resp.json(data);
-    } catch (error) {
-        resp.status(500).json ({ error: error.message});
+  try {
+    const { data, error } = await supabase
+        .from("products")
+        .select(`
+           id,
+           name,
+           price,
+           types: types (
+            name_type
+           )
+        `);
+    if (error) {
+      throw error;
     }
+
+    resp.json(data);
+  } catch (error) {
+    resp.status(500).json({ error: error.message });
+  }
 });
 
-/*
-productRoute.get("/product", (req, resp) => {
-    fs.readFile("./mocks/items.json", "utf-8", (err, data) => {
-        if(err) {
-            console.log("Erreur lecture du fichier JSON :", err);
-            resp.status(500).json({ error: "Erreur interne du serveur" });
-            return;
-        } try {
-            const products = JSON.parse(data);
-            //console.log(products);
-            resp.json(products);
-        } catch(err) {
-            //console.log("Erreur analyse JSON : ", err);
-            resp.status(500).json({ error: "Erreur interne du serveur" })
-        }
-    });
-});
-*/
-/*
-productRoute.get("/product/:id", (req, resp) => {
-    const productId = Number(req.params.id);
+//Route pour récupérer les infos détaillées sur le produit (id/nom/type/prix/dimenssioN/matériel/couleur)
+productRoute.get("/product/:id", async (req, resp) => {
+  const productId = req.params.id;
+  try {
+    const { data, error } = await supabase
+      .from("products")
+      .select(`
+        id,
+        name,
+        dimension,
+        price,
+        types: types (
+            name_type
+        ),
+        colors: colors (
+            name_color
+        ),
+        materials: materials (
+            name_material
+        )
+    `)
+      .eq("id", productId);
+      
+    if (error) {
+      throw error;
+    }
 
-    fs.readFile("./mocks/items.json", "utf-8", (err, data) => {
-        if(err) {
-            //console.log("Erreur lecture du fichier JSON :", err);
-            resp.status(500).json({ error: "Erreur interne du serveur" });
-            return;
-        } 
-        try {
-            const products = JSON.parse(data);
-            const product = products.find(product => product.id === productId);
-            if (!product) {
-                resp.status(404).json({ error: "Produit non trouvé" });
-                return;
-            }
-                //console.log(product);
-                resp.json(product);
-        } catch(err) {
-            console.log("Erreur analyse JSON : ", err);
-            resp.status(500).json({ error: "Erreur interne du serveur" })
-        }
-    });
+    resp.json(data);
+  } catch (error) {
+    resp.status(500).json({ error: error.message });
+  }
 });
-*/
 
 module.exports = productRoute;
+
