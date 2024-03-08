@@ -39,15 +39,16 @@ const authMiddleware = require('./middleware/authMiddleware');
 
 // Monter le routeur d'utilisateurs sur le chemin '/user', en appliquant d'abord authMiddleware
 // Cela signifie que les routes d'utilisateur nécessiteront une authentification
-server.use('/user', authMiddleware, userRouter);
+
+//server.use('/user', authMiddleware, userRouter);
 
 // Monter le routeur de produits sur le chemin '/' (racine)
 // Cela signifie que les routes de produits seront accessibles sans authentification
 server.use("/", productRouter);
  
+server.use("/", userRouter);
 
 // Démarrer le serveur et écouter les requêtes entrantes sur le port spécifié
 server.listen(port, () => {
   console.log(`Le serveur est connecté et écoute le port ${port}`);
 });
-//

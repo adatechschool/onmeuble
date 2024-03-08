@@ -25,27 +25,31 @@ userRoute.get("/user", async (req, resp) => {
 });
 */
 
-userRoute.get("/user", async (req, res) => {
-  try {
-    // Accéder aux informations de l'utilisateur depuis req.user
-    const userId = req.user.id;
+server.post('/login', async (req, res) => {
+  const { email, mot_de_passe } = req.body;
 
-    const { data, error } = await supabase
-        .from("users")
-        .select(`
-            id,
-            email
-        `)
-        .eq('id', userId);
+  const { data, error } = await supabase
+    .from('users')
+    .select('*')
+    .eq('email', email)
+    .single();
 
-    if (error) {
-      throw error;
-    }
-
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+  if (error) {
+    return res.status(500).json({ message: 'Erreur de base de données' });
   }
+
+  if (!data) {
+    return res.status(401).json({ message: 'Utilisateur non trouvé' });
+  }
+
+  const motDePasseCorrect = await bcrypt.compare(mot_de_passe, data.mot_de_passe);
+
+  if (!motDePasseCorrect) {
+    return res.status(401).json({ message: 'Mot de passe incorrect' });
+  }
+
+  // Renvoie le token de l'utilisateur
+  res.status(200).json({ token: data.token });
 });
 
 module.exports = userRoute;
