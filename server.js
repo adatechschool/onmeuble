@@ -45,7 +45,12 @@ const authMiddleware = require('./middleware/authMiddleware');
 // Monter le routeur de produits sur le chemin '/' (racine)
 // Cela signifie que les routes de produits seront accessibles sans authentification
 server.use("/", productRouter);
- 
+
+/**
+ * ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
+ * !Pour générer une authentification à chaque utlisation de cette route.
+ * ! remplacer par : server.use("/", authMiddleware, userRouter)
+ */
 server.use("/", userRouter);
 
 // Démarrer le serveur et écouter les requêtes entrantes sur le port spécifié
