@@ -1,0 +1,8 @@
+# Répertoire de stockage des différentes dépendances
+node_modules/
+
+# Fichier inutile propre au Mac
+.DS_Store
+
+# Fichier où sont stocké l'URL et la clé de la base de données "Supabase"
+.env
