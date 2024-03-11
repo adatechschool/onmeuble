@@ -24,11 +24,11 @@ module.exports.supabase = createClient(supabaseUrl, supabaseKey);
 
 // Importer le routeur de produits depuis le fichier ./routes/productRoute.js
 // Ce routeur gérera les requêtes liées aux produits
-const productRouter = require("./routes/productRoute");
+const productRouter = require("./Routes/productRoute");
 
 // Importer le routeur d'utilisateurs depuis le fichier ./routes/userRoute.js
 // Ce routeur gérera les requêtes liées aux utilisateurs
-const userRouter = require("./routes/userRoute");
+const userRouter = require("./Routes/userRoute");
 
 // Configurer le serveur pour parser les données JSON entrantes dans les corps de requête
 server.use(express.json());
