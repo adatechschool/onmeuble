@@ -10,7 +10,7 @@ function LoginForm() {
     e.preventDefault();
     // Ici, vous pouvez ajouter votre logique d'identification avec le backend
     // Une fois l'identification réussie, naviguez vers la page Dashboard
-    navigate("/dashboard");
+    navigate("/ProductsAdmin.js");
   };
 
   return (
@@ -35,9 +35,13 @@ function LoginForm() {
           required
         />
       </div>
-      <button type="submit">Se connecter</button>
+      <Link to="./ProductsAdmin">
+        <button type="submit">Se connecter</button>
+      </Link>
     </form>
   );
 }
 
-export default LoginForm;
+//! Export (IMPORTANT)
+
+export default Profile;

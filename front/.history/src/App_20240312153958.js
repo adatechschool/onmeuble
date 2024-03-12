@@ -9,7 +9,8 @@ import Profile from "./pages/Profile";
 import Details from "./pages/Details";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import ListArticle from "./components/ListArticle";
-import AdminPage from "./pages/AdminPage";
+/*
+import ProductsAdmin from "pages/ProductsAdmin"*/
 
 //? Component
 
@@ -47,9 +48,11 @@ function App() {
         {/* <Route> fait apparaître l'élément Details à l'URL ./products/:id */}
         <Route path="/products/:id" element={<Details />} />
         <Route path="/basket" element={<Basket />} />
+        {/* <Route> pour aller de de la page identification jusqu'a  */}
         <Route path="/profile" element={<Profile />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/listarticle" element={<ListArticle />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/dashboard" element={<ProductsAdmin />} />
+        <Route path="/" element={<LoginForm />} />
       </Routes>
     </div>
   );

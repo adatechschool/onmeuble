@@ -18,7 +18,6 @@ h1, h2, .type-p, .price-p {
 
 .leftNav {
   padding: 10px;
-
 }
 
 .rightNav {
@@ -28,7 +27,6 @@ h1, h2, .type-p, .price-p {
 }
 
 #logo {
-  padding: 5px;
   width: 100px;
 }
 
@@ -46,7 +44,6 @@ h1, h2, .type-p, .price-p {
 }
 
 #profilePic {
-  padding-right: 10;
   width: 50px;
 }
 
@@ -59,33 +56,30 @@ h1, h2, .type-p, .price-p {
 
 article {
   border: 3px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 20%;
   padding: 10px;
   margin: 10px;
   transition: all 0.3s ease;
 }
 
-
-
 article:hover {
-  box-shadow: 0 0 10px rgb(68, 67, 67);
+  box-shadow: 0 0 10px black;
   background-color: beige;
 }
 
 .img-furniture {
-  border-radius: 10px;
-  width: 100%;
-  transition: all 0.3s ease;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
 
 }
 
 .frame  {
   display: inline-block;
-  height:100% ;
+  height: 300px;
   max-width: 300px;
   overflow: hidden;
-  align-items : center;
 }
 
 .footer {
@@ -108,53 +102,3 @@ article:hover {
 .buy:hover {
   background-color: darkgreen;
 }
-
-
-/* Styles spécifiques au formulaire de connexion */
-
-.login-form {
-  max-width: 400px;
-  margin: 50px auto; /* Centre le formulaire verticalement et horizontalement */
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.login-form input {
-  width: calc(100% - 24px); /* Pour tenir compte de la largeur des bordures */
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-/* Ajoute plus d'espace entre les champs "Email" et "Mot de passe" */
-.login-form input[type="password"] {
-  margin-bottom: 30px;
-}
-
-.login-form button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.login-form button:hover {
-  background-color: #0056b3;
-}
-
-
-
