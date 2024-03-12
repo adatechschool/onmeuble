@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Details from "./pages/Details";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import ListArticle from "./components/ListArticle";
+import AdminPage from "./pages/AdminPage";
 
 //? Component
 
@@ -47,6 +48,8 @@ function App() {
           <Route path="/products/:id" element={<Details />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/listarticle" element={<ListArticle />} />
         </Routes>
       </div>
   );
