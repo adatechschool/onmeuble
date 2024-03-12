@@ -15,7 +15,7 @@ const Details = ({ id }) => {
     console.log(params); // Affiche un objet avec comme clé "id" et comme valeur l'id de l'objet cliqué
     
     // filter() récupère l'élément qui correspond à la condition (ici l'id de l'objet dans le tableau arrayOfFurniture)
-    const productItem = ListArticle.filter((product) => parseInt(product.id) == parseInt(params.id));
+    const productItem = ListArticle.filter((product) => parseInt(product.id) === parseInt(params.id));
     
     console.log(ListArticle);
     console.log(productItem);
@@ -31,7 +31,7 @@ const Details = ({ id }) => {
                     <p className='p-details'>{type}</p>
             <article className='article-container-detail'>
                 <div className='container-img'>
-                    <img id="img" src={img} />
+                    <img id="img" alt="" src={img} />
 
                 </div>
                 <div className='container-info'>
