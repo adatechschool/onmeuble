@@ -2,6 +2,7 @@
   "name": "on-meuble",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http:localhost:3001/products",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
     "@testing-library/jest-dom": "^5.17.0",

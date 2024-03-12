@@ -40,8 +40,8 @@ const Details = ({ id }) => {
                     <p className='p-details'>Couleur: {color}</p>
                     <p className='p-details'>Materiel: {material}</p>
                     <p className='p-details'>{price}</p>
-                    <button id='addToBasket'>
-                        Ajouter au panier
+                    <button id='buy'>
+                        Acheter
                     </button>
                 </div>
             </article>

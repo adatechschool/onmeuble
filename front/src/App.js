@@ -7,7 +7,7 @@ import Products from "./pages/Products";
 import Basket from "./pages/Basket";
 import Profile from "./pages/Profile";
 import Details from "./pages/Details";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import ListArticle from "./components/ListArticle";
 
 //? Component
@@ -39,6 +39,8 @@ function App() {
         </nav>
         {/* <Routes> permet de créer des routes, cette balise comprend que des routes vont être créées */}
         <Routes>
+          {/* <Route> fait apparaître au démarage du serveur l'élément Products à l'URL ./products/ */}
+          <Route path="/" element={<Navigate to="/products/" />} />
           {/* <Route> fait apparaître l'élément Products à l'URL ./products/ */}
           <Route path="/products/" element={<Products />} />
           {/* <Route> fait apparaître l'élément Details à l'URL ./products/:id */}
