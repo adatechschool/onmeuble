@@ -6,10 +6,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 //todo: Import d'images à revoir (si possible)
-// import Alex from "../img/Alex.png"
-// import Gluck from "../img/Gluck.jpg";
-// import Bubbule from "../img/Bubbule.jpg";
-// import Narnia from "../img/Narnia.jpg";
+import Alex from "../img/Alex.png";
+import Gluck from "../img/Gluck.jpg";
+import Bubbule from "../img/Bubbule.jpg";
+import Narnia from "../img/Narnia.jpg";
 import React from "react";
 
 //? Liste d'objets

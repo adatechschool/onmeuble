@@ -1,20 +1,24 @@
+//! Imports (IMPORTANT)
+
+import "../App.css";
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Ici, vous pouvez ajouter votre logique d'identification avec le backend
-    // Une fois l'identification réussie, naviguez vers la page Dashboard
-    navigate("/dashboard");
+    // Ajoutez ici la logique de connexion avec votre backend
+    console.log("Email:", email);
+    console.log("Mot de passe:", password);
   };
 
   return (
     <form className="login-form" onSubmit={handleLogin}>
+      {" "}
+      {/* Utilisation de la classe "login-form" */}
       <div>
         <label htmlFor="email">Email:</label>
         <input
@@ -41,3 +45,20 @@ function LoginForm() {
 }
 
 export default LoginForm;
+
+/*
+
+//? Component
+//todo: Créer la page profil administrateur
+
+function Profile() {
+  return (
+    <div>
+      <h1>Profile</h1>
+    </div>
+  );
+}
+
+//! Export (IMPORTANT)
+
+export default Profile;  */
