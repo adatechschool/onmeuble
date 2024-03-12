@@ -2,7 +2,7 @@
 // Importer le module Express pour créer le serveur web
 const express = require("express");
 
-// Créer une instance du serveur Express//
+// Créer une instance du serveur Express
 const server = express();
 
 // Définir le port sur lequel le serveur écoutera les requêtes entrantes (généralement 3000)
@@ -25,32 +25,32 @@ module.exports.supabase = createClient(supabaseUrl, supabaseKey);
 // Importer le routeur de produits depuis le fichier ./routes/productRoute.js
 // Ce routeur gérera les requêtes liées aux produits
 const productRouter = require("./Routes/productRoute");
+const productAdminRouter = require("./Routes/productAdminRoute")
 
 // Importer le routeur d'utilisateurs depuis le fichier ./routes/userRoute.js
 // Ce routeur gérera les requêtes liées aux utilisateurs
 const userRouter = require("./Routes/userRoute");
 
-// Configurer le serveur pour parser les données JSON entrantes dans les corps de requête
+// Configurer le serveur pour vparser les données JSON entrantes dans les corps de requête
 server.use(express.json());
 
 // Importer la fonction authMiddleware depuis le fichier ./middleware/authMiddleware.js
 // Ce middleware gérera probablement l'authentification des utilisateurs pour certaines routes
 const authMiddleware = require('./middleware/authMiddleware');
 
-// Monter le routeur d'utilisateurs sur le chemin '/user', en appliquant d'abord authMiddleware
-// Cela signifie que les routes d'utilisateur nécessiteront une authentification
-
-//server.use('/user', authMiddleware, userRouter);
-
 // Monter le routeur de produits sur le chemin '/' (racine)
 // Cela signifie que les routes de produits seront accessibles sans authentification
 server.use("/", productRouter);
+server.use("/", productAdminRouter);
 
 /**
  * ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
  * !Pour générer une authentification à chaque utlisation de cette route.
  * ! remplacer par : server.use("/", authMiddleware, userRouter)
- */
+*/
+// Monter le routeur d'utilisateurs sur le chemin '/user', en appliquant d'abord authMiddleware
+// Cela signifie que les routes d'utilisateur nécessiteront une authentification
+//server.use('/user', authMiddleware, userRouter);
 server.use("/", userRouter);
 
 // Démarrer le serveur et écouter les requêtes entrantes sur le port spécifié
