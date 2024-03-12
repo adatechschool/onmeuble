@@ -2,7 +2,8 @@
 
 import './Details.css';
 import { useParams } from 'react-router-dom';
-import { arrayOfFurniture } from '../components/ListArticle';
+// import { arrayOfFurniture } from '../components/ListArticle';
+import ListArticle from '../components/ListArticle';
 
 //? Component
 
@@ -14,9 +15,9 @@ const Details = ({ id }) => {
     console.log(params); // Affiche un objet avec comme clé "id" et comme valeur l'id de l'objet cliqué
     
     // filter() récupère l'élément qui correspond à la condition (ici l'id de l'objet dans le tableau arrayOfFurniture)
-    const productItem = arrayOfFurniture.filter((product) => parseInt(product.id) == parseInt(params.id));
+    const productItem = ListArticle.filter((product) => parseInt(product.id) == parseInt(params.id));
     
-    console.log(arrayOfFurniture);
+    console.log(ListArticle);
     console.log(productItem);
 
     // On déstructure l'objet pour récupérer les valeurs
