@@ -20,7 +20,7 @@ const Modal = ({ isModalOpen, modalContent, onClose }) => {
             <h3 className="modal-title">{modalContent.title}</h3>
             <p className="modalText">{modalContent.content1}</p>
             <div className="modal-image">
-              <iframe src={modalContent.image} title="gorilla-applause"/>
+              <img src={modalContent.image} alt=""/>
             </div>
             <p className="modalText">{modalContent.content2}</p>
           </main>
