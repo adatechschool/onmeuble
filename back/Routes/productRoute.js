@@ -20,6 +20,7 @@ productRoute.get("/products", async (req, resp) => {
           id,
           name,
           price,
+          image,
           types: types (
             name_type
           )
@@ -45,6 +46,7 @@ productRoute.get("/products/:id", async (req, resp) => {
         name,
         dimensions,
         price,
+        image,
         types: types (
             name_type
         ),

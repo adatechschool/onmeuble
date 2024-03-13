@@ -21,7 +21,7 @@ const Details = () => {
     useEffect(() => {
         const fetchProductDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/product/${id}`);
+                const response = await axios.get(`http://localhost:3000/products/${id}`);
                 console.log("Response data:", response.data);
                 
                 if (response.data && response.data.length > 0) {
@@ -79,7 +79,7 @@ const Details = ({ id }) => {
     console.log(productItem);
 */
     // On déstructure l'objet pour récupérer les valeurs
-    const { name, types, img, dimensions, colors, materials, price } = product;
+    const { name, types, image, dimensions, colors, materials, price } = product;
     
     return (
         <div id='container'>
@@ -87,7 +87,7 @@ const Details = ({ id }) => {
         <p className='p-details'>{types && types.name_type}</p>
         <article className='article-container-detail'>
             <div className='container-img'>
-                {<img id="img" alt="" src={img} />}
+                {<img id="img" alt="" src={image} />}
             </div>
             <div className='container-info'>
                 <p className='p-details'>{dimensions}</p>

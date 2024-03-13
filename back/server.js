@@ -11,6 +11,14 @@ const server = express();
 // Définir le port sur lequel le serveur écoutera les requêtes entrantes (généralement 3000)
 const port = 3000;
 
+const cors = require("cors")
+const corsOptions = {
+  origin : [
+    "http://localhost:3001"
+  ], optionSuccessStatus : 200
+}
+server.use(cors(corsOptions))
+
 // Charger les variables d'environnement à partir d'un fichier .env en utilisant le package dotenv dansles modules
 require('dotenv').config();
 
