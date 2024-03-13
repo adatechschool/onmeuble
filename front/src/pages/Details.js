@@ -90,10 +90,10 @@ const Details = ({ id }) => {
                 {<img id="img" alt="" src={image} />}
             </div>
             <div className='container-info'>
-                <p className='p-details'>{dimensions}</p>
+                <p className='p-details'>Dimensions: {dimensions}</p>
                 <p className='p-details'>Couleur: {colors && colors.name_color}</p>
                 <p className='p-details'>Materiel: {materials && materials.name_material}</p>
-                <p className='p-details'>{price}</p>
+                <p className='p-details'>{price}€</p>
                 <button onClick={() => openModal(buy)} id='buy'>
                     Acheter
                 </button>

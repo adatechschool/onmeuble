@@ -1,7 +1,5 @@
 
-
 #container {
-    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +50,7 @@ article {
     width: 24%;
 }
 
-article:hover {
+.article-container-detail:hover {
     box-shadow: none;
     height: 24%;
     background-color: none;
