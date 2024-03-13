@@ -2,16 +2,22 @@
 
 import "../App.css";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 //todo: Import d'images à revoir (si possible)
-import Alex from "../img/Alex.png"
+<<<<<<< Updated upstream
+// import Alex from "../img/Alex.png"
+// import Gluck from "../img/Gluck.jpg";
+// import Bubbule from "../img/Bubbule.jpg";
+// import Narnia from "../img/Narnia.jpg";
+=======
+import Alex from "../img/Alex.png";
 import Gluck from "../img/Gluck.jpg";
 import Bubbule from "../img/Bubbule.jpg";
 import Narnia from "../img/Narnia.jpg";
+>>>>>>> Stashed changes
 import React from "react";
-
 
 //? Liste d'objets
 
@@ -84,7 +90,7 @@ function ListArticle() {
         <article key={product.id}>
           <h2>{product.name}</h2>
           <p className="type-p">{product.type}</p>
-          <img src={product.img} className="img-furniture" alt={product.alt} />
+          <img src={product.image} className="img-furniture" alt={product.alt} />
           <Link to={`/products/${product.id}`}>
             <button className="buy">Voir plus</button>
           </Link>

@@ -1,10 +1,21 @@
 /* NAVBAR */
+
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
 
  * {
 
   font-family: Chivo;
  }
+/* Ce typo graphique est designé pur le logo */
+ @font-face {
+  font-family: 'Pilowlava-Regular'; /* Nom de la police */
+  src: url('./fonts/Pilowlava-Regular.woff2') format('woff2'); /* Chemin vers le fichier de police */
+}
+@font-face {
+  font-family: 'borna-medium'; /* Nom de la police */
+  src: url('./fonts/borna-medium-webfont.woff2') format('woff2'); /* Chemin vers le fichier de police */
+}
+
 
 nav {
   display: grid;
@@ -13,21 +24,26 @@ nav {
 
 h1, h2, .type-p, .price-p {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'borna';
+  color : #5f7cfc;
 }
+ 
 
 .leftNav {
   padding: 10px;
+
 }
 
 .rightNav {
+  padding: 5%; /*space a droite de la barre nav*/
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 #logo {
-  width: 100px;
+  padding: 5px;
+  width: 200px;
 }
 
 .cart, #search-input {
@@ -44,6 +60,7 @@ h1, h2, .type-p, .price-p {
 }
 
 #profilePic {
+  padding-right: 10;
   width: 50px;
 }
 
@@ -56,30 +73,33 @@ h1, h2, .type-p, .price-p {
 
 article {
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 20%;
   padding: 10px;
   margin: 10px;
   transition: all 0.3s ease;
 }
 
+
+
 article:hover {
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgb(68, 67, 67);
   background-color: beige;
 }
 
 .img-furniture {
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
+  border-radius: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
 
 }
 
 .frame  {
   display: inline-block;
-  height: 300px;
+  height:100% ;
   max-width: 300px;
   overflow: hidden;
+  align-items : center;
 }
 
 .footer {
@@ -89,16 +109,66 @@ article:hover {
 }
 
 .buy {
-  width: min-content;
-  padding: 0 30px;
-  background-color: green;
+  width: max-content;
+  padding: 10px 30px;
+  background-color: #5ffc91;
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease;
   margin: 10px;
-  color: white;
+  color: rgb(45, 119, 136);
 }
 
 .buy:hover {
-  background-color: darkgreen;
+  background-color: rgb(84, 118, 252);
+  color:#ffffff;
 }
+
+
+/* Styles spécifiques au formulaire de connexion */
+
+.login-form {
+  max-width: 400px;
+  margin: 50px auto; /* Centre le formulaire verticalement et horizontalement */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  width: calc(100% - 24px); /* Pour tenir compte de la largeur des bordures */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Ajoute plus d'espace entre les champs "Email" et "Mot de passe" */
+.login-form input[type="password"] {
+  margin-bottom: 30px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+
