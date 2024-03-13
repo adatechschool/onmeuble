@@ -1,4 +1,7 @@
-// server.js
+// server.js = point d'entrée principale du serveur Node.js qui 
+// CONFIGURE et  DEMARRE un serveur Express, DEFINIT les ROUTES et MIDDLEWARES pour 
+// gérer les REQUETES HTTP ENTRANTES.
+
 // Importer le module Express pour créer le serveur web
 const express = require("express");
 
@@ -7,6 +10,14 @@ const server = express();
 
 // Définir le port sur lequel le serveur écoutera les requêtes entrantes (généralement 3000)
 const port = 3000;
+
+const cors = require("cors")
+const corsOptions = {
+  origin : [
+    "http://localhost:3001"
+  ], optionSuccessStatus : 200
+}
+server.use(cors(corsOptions))
 
 // Charger les variables d'environnement à partir d'un fichier .env en utilisant le package dotenv dansles modules
 require('dotenv').config();
@@ -25,6 +36,8 @@ module.exports.supabase = createClient(supabaseUrl, supabaseKey);
 // Importer le routeur de produits depuis le fichier ./routes/productRoute.js
 // Ce routeur gérera les requêtes liées aux produits
 const productRouter = require("./Routes/productRoute");
+
+const productAdminRouter = require('./Routes/productAdminRoute');
 
 // Importer le routeur d'utilisateurs depuis le fichier ./routes/userRoute.js
 // Ce routeur gérera les requêtes liées aux utilisateurs
@@ -45,6 +58,7 @@ const authMiddleware = require('./middleware/authMiddleware');
 // Monter le routeur de produits sur le chemin '/' (racine)
 // Cela signifie que les routes de produits seront accessibles sans authentification
 server.use("/", productRouter);
+server.use("/", productAdminRouter);
 
 /**
  * ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
@@ -57,3 +71,4 @@ server.use("/", userRouter);
 server.listen(port, () => {
   console.log(`Le serveur est connecté et écoute le port ${port}`);
 });
+
