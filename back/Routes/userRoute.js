@@ -29,9 +29,10 @@ userRoute.post("/user", async (req, resp) => {
 
 /*
 ! Route pour réaliser un login standard, par vérification d'un email et password
-! En retour on obtient un token / URL : localhost:3000/login2
-! Cette route ne fonctionne pas avec supabase. La base de donnée possède ces propres fonctions pour le login
+! Cette route ne fonctionne pas avec supabase. La base de donnée possède ses propres fonctions pour le login
 */
+
+//? ROUTE VALIDE
 userRoute.post("/login2", async (req, res) => {
   const { email, password } = req.body; // Extrait les valeurs 'email' et 'password' du corps de la requête HTTP
 
@@ -50,19 +51,12 @@ userRoute.post("/login2", async (req, res) => {
   }
   
 /*
-  Utilise bcrypt pour comparer le mot de passe fourni par l'utilisateur (password)
-  avec le mot de passe crypté stocké dans la base de données (data.password)
-  et stocke le résultat dans la variable 'correctPassword'
+  * Utilise bcrypt pour comparer le mot de passe fourni par l'utilisateur (password)
+  * avec le mot de passe crypté stocké dans la base de données (data.password)
+  * et stocke le résultat dans la variable 'correctPassword' (valeur booléenne)
 */
   const correctPassword = await bcrypt.compare(password, data.password);
-  
-  if (!correctPassword)  {
-    return res.status(401).json({ message: 'Mot de passe incorrect' });
-  }
-
-  // Renvoie le token de l'utilisateur
-  console.log('Token généré :', data.token);
-  res.status(200).json({ token: data.token });
+  return correctPassword ? res.status(200).json({ message: 'Connexion réussie' }) : res.status(401).json({ message: 'Mot de passe incorrect' });
 });
 
 

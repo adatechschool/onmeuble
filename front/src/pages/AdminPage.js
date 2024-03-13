@@ -89,6 +89,7 @@ function AdminPage() {
           type="text"
           name="material"
           value={product.material}
+          placeholder={product.material}
           onChange={handleInputChange}
         />
 

@@ -11,6 +11,7 @@ import Details from "./pages/Details";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import ListArticle from "./components/ListArticle";
 import AdminPage from "./pages/AdminPage";
+import ProductsAdmin from "./pages/ProductsAdmin";
 
 //? Component
 
@@ -51,6 +52,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/listarticle" element={<ListArticle />} />
+        <Route path="/productsAdmin" element={<ProductsAdmin />} />
+        <Route path="/adminPage/:id" element={<AdminPage />} />
       </Routes>
     </div>
   );
