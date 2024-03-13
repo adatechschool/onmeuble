@@ -1,7 +1,8 @@
 //! Imports (IMPORTANT)
+/*  old image Import= import logo from "./img/furniture.png";  */
 
 import "./App.css";
-import logo from "./img/furniture.png";
+import logo from "./img/OnMeuble.jpg";
 import "https://kit.fontawesome.com/6a21cd18bd.js";
 import Products from "./pages/Products";
 import Basket from "./pages/Basket";
