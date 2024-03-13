@@ -146,7 +146,7 @@ npm run build
         <img width="150px" src='./img/supabase.png' alt="SUPABASE">
     </a>
     <a target="_blank" rel="noreferrer" padding="20px;">
-        <img width="150px" src='./img/thunder.png' alt="POSTMAN">
+        <img width="150px" src='./img/Thunder.png' alt="THUNDER CLIENT">
     </a>
     <a target="_blank" rel="noreferrer" padding="20px;">
         <img width="150px" src='./img/nodemon.png' alt="NODEMON">
