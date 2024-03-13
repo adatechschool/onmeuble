@@ -1,3 +1,6 @@
+//! FICHIER PLUS UTILISÉ
+
+//! Middleware pour l'authentification du token
 const supabase = require('../server').supabase;
 
 // Middleware pour l'authentification du token
@@ -30,5 +33,5 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
-// Exporte le middleware pour être utilisé dans d'autres parties de l'application
+//! Exporte le middleware pour être utilisé dans d'autres parties de l'application
 module.exports = authMiddleware;
