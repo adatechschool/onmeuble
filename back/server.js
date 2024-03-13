@@ -1,5 +1,5 @@
 // server.js
-// Importer le module Express pour créer le serveur web
+//! Importer le module Express pour créer le serveur web
 const express = require("express");
 
 // Créer une instance du serveur Express
@@ -50,17 +50,19 @@ const authMiddleware = require('./middleware/authMiddleware');
 server.use("/", productRouter);
 server.use("/", productAdminRouter);
 
-/**
- * ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
- * !Pour générer une authentification à chaque utlisation de cette route.
- * ! remplacer par : server.use("/", authMiddleware, userRouter)
+/*
+  ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
+  ! Pour générer une authentification à chaque utlisation de cette route.
+  ! remplacer par : server.use("/", authMiddleware, userRouter)
 */
-// Monter le routeur d'utilisateurs sur le chemin '/user', en appliquant d'abord authMiddleware
-// Cela signifie que les routes d'utilisateur nécessiteront une authentification
-//server.use('/user', authMiddleware, userRouter);
+
 server.use("/", userRouter);
 
-// Démarrer le serveur et écouter les requêtes entrantes sur le port spécifié
+// Monter le routeur d'utilisateurs sur le chemin '/user', en appliquant d'abord authMiddleware
+// Cela signifie que les routes d'utilisateur nécessiteront une authentification
+//? server.use('/user', authMiddleware, userRouter);
+
+//! Démarrer le serveur et écouter les requêtes entrantes sur le port spécifié
 server.listen(port, () => {
   console.log(`Le serveur est connecté et écoute le port ${port}`);
 });

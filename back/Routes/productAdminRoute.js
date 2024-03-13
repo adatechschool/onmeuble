@@ -3,13 +3,13 @@ const express = require("express");
 const productAdminRoute = express.Router(); // Cree une nouvelle instance de Router à partir de Express
 
 
-// Importe le client Supabase depuis le serveur
+//! Importe le client Supabase depuis le serveur
 const server = require("../server");
 const supabase = server.supabase;
 
 // Permet d'UPDATE les caractéristiques d'un produit (dont l'ID est défini)
 productAdminRoute.put('/products/:id', async (req, res) => {
-  const {id} = req.params
+  const {id} = req.params // On récupère l'ID du produit dans l'URL
   const newName = req.body.name
   const newDimensions = req.body.dimensions
   const newPrice = req.body.price
@@ -21,7 +21,8 @@ productAdminRoute.put('/products/:id', async (req, res) => {
   try {
     const { data, error} = await supabase
     .from('products')
-    .update({ // C'est ici qu'on update.
+    .update({
+      // C'est ici qu'on UPDATE
       name: newName, 
       dimensions: newDimensions, 
       price: newPrice, 
