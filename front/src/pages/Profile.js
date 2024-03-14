@@ -56,7 +56,7 @@ function LoginForm() {
         />
       </div>
       <button type="submit">Se connecter</button>
-      <p id="error">Erreur</p>
+      <p>Erreur</p>
     </form>
   );
 }
