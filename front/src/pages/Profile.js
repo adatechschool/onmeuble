@@ -7,10 +7,17 @@ function LoginForm() {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // Ici, vous pouvez ajouter votre logique d'identification avec le backend
     // Une fois l'identification réussie, naviguez vers la page Dashboard
-    navigate("/productsAdmin");
+    // navigate("/productsAdmin");
+    if (email === "laurelinefleuri@gmail.com" && password === "1234") {
+      console.log("Connexion réussie");
+      navigate("/productsAdmin");
+    } else {
+      console.log("Email ou mot de passe incorrect");
+      navigate("/profile");
+    }
   };
 
   return (

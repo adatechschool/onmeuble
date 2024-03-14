@@ -1,5 +1,5 @@
 // server.js = point d'entrée principale du serveur Node.js qui 
-// CONFIGURE et  DEMARRE un serveur Express, DEFINIT les ROUTES et MIDDLEWARES pour 
+// CONFIGURE et DEMARRE un serveur Express, DEFINIT les ROUTES et MIDDLEWARES pour 
 // gérer les REQUETES HTTP ENTRANTES.
 
 // Importer le module Express pour créer le serveur web
@@ -62,7 +62,7 @@ server.use("/", productAdminRouter);
 
 /**
  * ! Route à modifier avec le middleware d'authentification une fois le login réalisé.
- * !Pour générer une authentification à chaque utlisation de cette route.
+ * ! Pour générer une authentification à chaque utlisation de cette route.
  * ! remplacer par : server.use("/", authMiddleware, userRouter)
  */
 server.use("/", userRouter);

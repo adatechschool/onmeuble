@@ -16,7 +16,7 @@ const Details = () => {
     const [product, setProduct] = useState({}); // État pour stocker les détails du produit
     const [error, setError] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false) // Ouvertrue modal
-    const [modalContent, setModalContent] = useState('') //contenu modal
+    const [modalContent, setModalContent] = useState('') // Contenu modal
 
     useEffect(() => {
         const fetchProductDetails = async () => {
@@ -55,12 +55,12 @@ const Details = () => {
 const openModal = (content) => {
     setIsModalOpen(true);
     setModalContent(content);
-   };
+};
 
 // fonction utliser si le modal est fermé
 const closeModal = () => {
     setIsModalOpen(false);
-   };
+};
 
 
 

@@ -27,8 +27,8 @@ function ListArticle() {
         <article key={product.id}>
           <h2>{product.name}</h2>
           <p className="type-p">{product.type}</p>
-          <img src={product.img} className="img-furniture" alt={product.alt} />
-          <Link to={`/adminPage/${product.id}`}>
+          <img src={product.image} className="img-furniture" alt={product.alt} />
+          <Link to={`/detailsAdmin/${product.id}`}>
             <button className="buy">Voir plus</button>
           </Link>
           <p className="price-p">{product.price} €</p>
