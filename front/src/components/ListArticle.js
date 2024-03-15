@@ -1,6 +1,6 @@
 //! Imports (IMPORTANT )
 
-import "../App.css";
+import "./ListArticle.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -26,14 +26,22 @@ function ListArticle() {
   return (
     <div className="article-container">
       {products.map((product) => (
-        <article key={product.id}>
-          <h2>{product.name}</h2>
-          <p className="type-p">{product.type}</p>
-          <img src={product.image} className="img-furniture" alt={product.alt} />
-          <Link to={`/products/${product.id}`}>
-            <button className="buy">Voir plus</button>
-          </Link>
-          <p className="price-p">{product.price} €</p>
+        <article className="article-list" key={product.id}>
+          <h2 className="name-article">{product.name}</h2>
+          <p className="type-article">{product.type}</p>
+          <a href className="frame" target="_blank">
+            <img
+              src={product.image}
+              className="img-furniture"
+              alt={product.alt}
+            />
+          </a>
+          <div className="footer-list">
+            <Link to={`/products/${product.id}`}>
+              <button className="buy">Voir plus</button>
+            </Link>
+            <p className="price center-price">{product.price} €</p>
+          </div>
         </article>
       ))}
     </div>
