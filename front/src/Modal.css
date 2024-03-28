@@ -5,14 +5,14 @@
 }
 
 :root {
-    --title-color : #a52a2a;
+    --title-color : #5f7cfc;
 }
 
 body {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: black;
     background: #f5f5f5;   
-   }
+}
 
 .modal {
     position: fixed;
@@ -28,7 +28,8 @@ body {
 
 .modal-content {
     border: 1px solid #fff;
-    width: Auto;
+    width: auto;
+    height: auto;
     background-color: #fff;
     border-radius: 15px;
 }
@@ -38,25 +39,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items : center;
+    justify-content: center;
 }
 
 .exit-icon {    
     cursor: pointer;
     font-size: 1.2em;
+
+    display: flex;
+    justify-content: flex-end;
 }
 
 .modal-title {
     color: var(--title-color);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 25px;
     /*line-height: 28px;*/
 }
 
-.modal-image iframe {
-    height: auto;
-    width: auto;
+.modal-image {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.modal-image img {
+    width: 55%;
 }
 
 .modalText {
     font-size: 1em;
+    margin-bottom: 25px;
 }

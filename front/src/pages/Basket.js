@@ -1,7 +1,5 @@
 //! Imports (IMPORTANT)
 
-
-
 //? Component
 //todo: Créer la page panier
 
@@ -9,11 +7,16 @@ function Basket() {
     return (
         <div>
             <h2>
-                GeeksforGeeks is a computer science portal
-                for geeks!
+                Votre panier
             </h2>
             <p>
-                Read more about us at :
+                Momentanément indisponible.
+            </p>
+            <p>
+                Pour tout achat, retournez à la page d'accueil, appuyez sur "voir plus" et vous passerez à l'achat.
+            </p>
+            <p>
+                Merci de votre compréhension.
             </p>
         </div>
     );
