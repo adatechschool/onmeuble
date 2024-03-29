@@ -9,7 +9,7 @@ function Products() {
   return (
     <div className="container">
       <div className="container-banner">
-        <h1>Premier site de ventes de meubles vintage !</h1>
+        <h1>Premier site de vente de meubles vintage !</h1>
       </div>
       <ListArticle />
     </div>

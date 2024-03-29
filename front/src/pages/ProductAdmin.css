@@ -1,0 +1,20 @@
+.wrapper-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.img-admin-furniture {
+
+    width: 10rem;
+
+}
+
+.article-admin-container {
+    text-align: center;
+
+}
+
+td {
+    padding: .6rem 3.7rem;
+}
